@@ -1,0 +1,90 @@
+/* src/css/Main.css */
+.main-container {
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.icon {
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.banner {
+  background: linear-gradient(to top, #4e628e 0%, #223263 100%);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 한 줄에 두 개의 카드 */
+  gap: 15px; /* 카드 간 간격 */
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 8px; /* 이미지와 텍스트 간 간격 */
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* 텍스트 간 간격 */
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap; /* 텍스트 한 줄로 제한 */
+  overflow: hidden; /* 넘치는 텍스트 숨김 */
+  text-overflow: ellipsis; /* 넘치는 텍스트에 "..." 표시 */
+  text-align: left; /* 제목 왼쪽 정렬 */
+}
+
+.card-subtitle {
+  font-size: 12px;
+  color: #888;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-group {
+  font-size: 12px;
+  color: #e74c3c; /* 빨간색 강조 */
+}
+
+.card-price {
+  font-size: 14px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.card-period {
+  font-size: 12px;
+  color: #7f8c8d;
+}
