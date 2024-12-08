@@ -1,7 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // 페이지 이동을 위한 useNavigate
 import "../css/Notification.css"; // Notification 페이지 스타일 파일
 
-function Notification() {
+function Notification() {const navigate = useNavigate();
+
+  const handleBackClick = () => {
+    navigate("/main"); // Notification 페이지로 이동
+  };
   const notifications = [
     {
       id: 1,
@@ -29,7 +34,7 @@ function Notification() {
   return (
     <div className="notification-container">
       <header className="notification-header">
-        <button className="back-button">←</button>
+        <button className="back-button" onClick={handleBackClick}>←</button>
         <h1 className="header-title">Feed</h1>
       </header>
       <div className="notification-list">

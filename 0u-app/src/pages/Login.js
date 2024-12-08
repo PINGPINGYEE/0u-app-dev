@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/Login.css"; // CSS 파일 가져오기
+import { useNavigate } from "react-router-dom"; // 로그인 성공 시 이동
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    // 하드코딩된 계정 정보
+    const hardcodedEmail = "adm@hkr.kr";
+    const hardcodedPassword = "admhkr";
+
+    if (email === hardcodedEmail && password === hardcodedPassword) {
+      alert("Login successful!");
+      navigate("/main"); // 로그인 성공 시 메인 페이지로 이동
+    } else {
+      setError("Invalid email or password.");
+    }
+  };
+
   return (
     <div className="login-container">
       <div className="logo-login">
@@ -10,13 +31,27 @@ const Login = () => {
       <h2 className="login-title">Welcome to 0U</h2>
       <p className="login-subtitle">Sign in to continue</p>
 
-      <form className="login-form">
-        <input type="email" placeholder="Email" className="login-input" />
-        <input type="password" placeholder="Password" className="login-input" />
+      <form className="login-form" onSubmit={handleLogin}>
+        <input
+          type="email"
+          placeholder="Email"
+          className="login-input"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)} // 이메일 입력 핸들러
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          className="login-input"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)} // 비밀번호 입력 핸들러
+        />
         <button type="submit" className="login-button">
           Sign In
         </button>
       </form>
+
+      {error && <p className="login-error">{error}</p>} {/* 에러 메시지 */}
 
       {/* OR 구분선 */}
       <div className="login-or-container">

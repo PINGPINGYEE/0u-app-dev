@@ -17,7 +17,6 @@ const Category = () => {
   return (
     <div className="category-container">
       <header className="category-header">
-        <button className="back-button">←</button>
         <h1>Category</h1>
       </header>
       <ul className="category-list">

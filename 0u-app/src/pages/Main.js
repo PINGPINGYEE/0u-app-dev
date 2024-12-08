@@ -1,7 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // 페이지 이동을 위한 useNavigate
 import "../css/Main.css"; // src/css 폴더에 있는 스타일 파일
 
-function Main() {
+function Main() {const navigate = useNavigate(); // useNavigate 훅 사용
+
+  const handleNotificationClick = () => {
+    navigate("/notification"); // Notification 페이지로 이동
+  };
   return (
     <div className="main-container">
       <header className="header">
@@ -23,6 +28,7 @@ function Main() {
             src="/Notification.png"
             alt="Notification Icon"
             className="icon"
+            onClick={handleNotificationClick}
           />
           {/* 메시지 아이콘 */}
           <img

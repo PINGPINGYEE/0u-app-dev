@@ -1,7 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "../css/Order.css"; // CSS 파일 가져오기
 
 const Order = () => {
+
+  const navigate = useNavigate(); // 페이지 이동을 위한 useNavigate 훅
+
+  const handleBackClick = () => {
+    navigate("/profile"); // Profile 페이지로 이동
+  };
   // 더미 데이터
   const orders = [
     {
@@ -27,7 +34,7 @@ const Order = () => {
     <div className="order-container">
       {/* 헤더 */}
       <header className="order-header">
-        <button className="back-button">&lt;</button>
+      <button className="back-button" onClick={handleBackClick}>←</button> {/* 뒤로가기 버튼 */}
         <h1 className="order-title">대여내역</h1>
       </header>
       <p className="header-divider" /> {/* 추가된 부분 */}
