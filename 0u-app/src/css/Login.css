@@ -1,0 +1,108 @@
+.login-container {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f8f9fc;
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.login-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  color:#001f54;
+}
+
+.login-subtitle {
+  color: #9098B1; /* 텍스트 색상 */
+  margin-bottom: 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 400px;
+}
+
+.login-input {
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  font-size: 16px;
+  height: 27px;
+  background-color: #f8f9fc;
+}
+
+.login-button {
+  padding: 10px;
+  background-color: #001f54;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 0px;
+  height: 50px;
+}
+
+.login-or {
+  color: #6c757d;
+  margin: 20px 0;
+}
+
+.login-social {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 400px;
+}
+
+.social-button {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 47px;
+  border: 1px solid #ced4da;
+  color: #9098B1;
+  font-weight: bold;
+  text-align: center;
+  background-color: #f8f9fc;
+}
+
+.social-button:hover {
+  background-color: #f1f3f5; /* 호버 시 배경 색 */
+}
+
+.login-footer {
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.dont-have {
+  font-size: 14px; /* 기본 텍스트 크기 */
+  font-weight: normal; /* 기본 텍스트 두께 */
+  color: #9098B1; /* 텍스트 색상 */
+  text-decoration: none; /* 밑줄 제거 */
+}
+
+.dont-have a {
+  color:#001f54; /* 링크 텍스트 색상 */
+  font-weight: bold; /* 링크 굵게 표시 */
+  text-decoration: none; /* 밑줄 제거 */
+}
+.login-link {
+  text-decoration: none;
+  color: #001f54;
+  font-weight: bold;
+}
+  
