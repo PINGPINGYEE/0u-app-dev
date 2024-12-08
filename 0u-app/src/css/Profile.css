@@ -1,0 +1,137 @@
+/* src/css/Profile.css */
+.profile-container {
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9; /* 배경색 */
+  height: 100vh; /* 페이지 전체 높이 */
+  overflow-y: auto; /* 스크롤 가능 */
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.back-button {
+  font-size: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  margin-right: 10px;
+}
+
+.header-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.profile-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-details {
+  flex: 1;
+}
+
+.profile-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #223263;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.edit-icon {
+  font-size: 14px;
+  color: #888;
+  cursor: pointer;
+  margin-left: 5px;
+  filter: grayscale(100%); /* 흑백 처리 */
+  transition: filter 0.2s ease;
+}
+
+.edit-icon:hover {
+  filter: grayscale(70%); /* 흑백 처리 */
+}
+
+.profile-username {
+  font-size: 12px;
+  color: #888;
+  margin: 5px 0;
+}
+
+.profile-group {
+  font-size: 12px;
+  margin: 0;
+}
+
+.profile-options {
+  margin-top: 10px;
+}
+
+.profile-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.option-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #223263;
+}
+
+.option-value {
+  font-size: 14px;
+  color: #555;
+}
+
+.edit-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* 입력창과 버튼 사이의 간격 */
+  margin-top: 5px; /* 입력창과 기존 텍스트 간 간격 */
+}
+
+.edit-input {
+  font-size: 14px;
+  padding: 8px; /* 입력창 내부 여백 */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  flex: 1;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* 입력창 그림자 */
+}
+
+.save-button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 8px 15px; /* 버튼 크기 조정 */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px; /* 글씨 크기 */
+  font-weight: bold;
+  transition: background-color 0.2s ease; /* 색상 전환 효과 */
+}
+
+.save-button:hover {
+  background-color: #0056b3; /* 버튼 호버 시 더 어두운 색상 */
+}
+
