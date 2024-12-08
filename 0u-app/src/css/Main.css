@@ -8,27 +8,51 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  padding: 15px 0;
   border-bottom: 1px solid #ddd;
+  position: relative; /* 로고를 항상 중앙에 유지하기 위한 설정 */
+}
+
+.logo {
+  position: absolute; /* 로고를 항상 중앙에 고정 */
+  left: 50%; /* 부모 요소의 가운데로 이동 */
+  transform: translateX(-50%); /* 가운데 정렬 */
+  height: 42px; /* 로고 크기 */
+  width: auto;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* 아이콘 간 간격 */
 }
 
 .icon {
-  margin: 0 10px;
-  font-size: 18px;
+  height: 20px; /* 기본 아이콘 크기 */
+  width: 20px;
+  object-fit: contain; /* 아이콘 비율 유지 */
+  cursor: pointer; /* 포인터 스타일 */
+  transition: transform 0.2s ease; /* 크기 변화 애니메이션 */
 }
 
-.title {
-  font-size: 24px;
+.icon:hover {
+  transform: scale(1.1); /* 크기를 1.2배로 확대 */
 }
 
 .banner {
   background: linear-gradient(to top, #4e628e 0%, #223263 100%);
   color: #fff;
-  text-align: center;
+  text-align: left;
   padding: 20px;
   border-radius: 10px;
   margin: 10px 0;
 }
+
+
+.title {
+  font-size: 24px;
+}
+
 
 .cards {
   display: grid;
@@ -47,13 +71,13 @@
 .card-image {
   width: 100%;
   border-radius: 10px;
-  margin-bottom: 8px; /* 이미지와 텍스트 간 간격 */
+  margin-bottom: 5px; /* 이미지와 텍스트 간 간격 */
 }
 
 .card-content {
   display: flex;
   flex-direction: column;
-  gap: 4px; /* 텍스트 간 간격 */
+  gap: 2px; /* 텍스트 간 간격 최소화 */
 }
 
 .card-title {
@@ -64,6 +88,8 @@
   overflow: hidden; /* 넘치는 텍스트 숨김 */
   text-overflow: ellipsis; /* 넘치는 텍스트에 "..." 표시 */
   text-align: left; /* 제목 왼쪽 정렬 */
+  margin: 5px 0 0 0; /* 기본 마진 제거 */
+  line-height: 1.2; /* 텍스트 높이 조정 */
 }
 
 .card-subtitle {
@@ -71,6 +97,8 @@
   color: #888;
   display: flex;
   justify-content: space-between;
+  margin: 5px 0 0 0; /* 기본 마진 제거 */
+  line-height: 1.2; /* 텍스트 높이 조정 */
 }
 
 .card-group {
@@ -82,9 +110,13 @@
   font-size: 14px;
   font-weight: bold;
   color: #2c3e50;
+  margin: 10px 0 0 0; /* 기본 마진 제거 */
+  line-height: 1.2; /* 텍스트 높이 조정 */
 }
 
 .card-period {
   font-size: 12px;
   color: #7f8c8d;
+  margin: 5px 0 0 0; /* 기본 마진 제거 */
+  line-height: 1.2; /* 텍스트 높이 조정 */
 }

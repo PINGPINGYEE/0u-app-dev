@@ -5,16 +5,35 @@ function Main() {
   return (
     <div className="main-container">
       <header className="header">
-        <i className="fas fa-search icon"></i>
-        <h1 className="title">0U</h1>
-        <div>
-          <i className="fas fa-bell icon"></i>
-          <i className="fas fa-user icon"></i>
+        {/* 검색 아이콘 */}
+        <img
+          src="/Search.png"
+          alt="Search Icon"
+          className="icon"
+        />
+        {/* 로고 이미지 */}
+        <img
+          src="/Icon.png"
+          alt="0U Logo"
+          className="logo"
+        />
+        <div className="header-icons">
+          {/* 알림 아이콘 */}
+          <img
+            src="/Notification.png"
+            alt="Notification Icon"
+            className="icon"
+          />
+          {/* 메시지 아이콘 */}
+          <img
+            src="/Message.png"
+            alt="Message Icon"
+            className="icon"
+          />
         </div>
       </header>
       <div className="banner">
-        <h2>빌릴수록 더욱 아끼는 환경,</h2>
-        <h3>환경을 보호하는 소비</h3>
+        <h2>빌릴수록 더욱 아끼는 환경, 환경을 보호하는 소비</h2>
       </div>
       <div className="cards">
         {/* 상품 1 */}
@@ -61,7 +80,7 @@ function Main() {
             <p className="card-subtitle">
               머니먼일 <span className="card-group">278그루</span>
             </p>
-            <p className="card-price">₩12,000</p>
+            <p className="card-price">₩20,000</p>
             <p className="card-period">24.11.22 (7일간)</p>
           </div>
         </div>
@@ -73,12 +92,44 @@ function Main() {
             className="card-image"
           />
           <div className="card-content">
-            <p className="card-title">Gaming Chair</p>
+            <p className="card-title">JBL Bluetooth S...</p>
             <p className="card-subtitle">
-              개임이좋아요 <span className="card-group">198그루</span>
+              스피커어헉 <span className="card-group">198그루</span>
             </p>
             <p className="card-price">₩45,000</p>
             <p className="card-period">24.11.25 (3일간)</p>
+          </div>
+        </div>
+        {/* 상품 5 */}
+        <div className="card">
+          <img
+            src="https://via.placeholder.com/150"
+            alt="Camping Tent"
+            className="card-image"
+          />
+          <div className="card-content">
+            <p className="card-title">Crayon 32 Colors</p>
+            <p className="card-subtitle">
+              캐쵸크레용 <span className="card-group">215그루</span>
+            </p>
+            <p className="card-price">₩5,000</p>
+            <p className="card-period">24.11.21 (5일간)</p>
+          </div>
+        </div>
+        {/* 상품 6 */}
+        <div className="card">
+          <img
+            src="https://via.placeholder.com/150"
+            alt="Camping Tent"
+            className="card-image"
+          />
+          <div className="card-content">
+            <p className="card-title">Renton</p>
+            <p className="card-subtitle">
+              왜거기랜턴을 <span className="card-group">22그루</span>
+            </p>
+            <p className="card-price">₩1,000</p>
+            <p className="card-period">24.11.30 (5일간)</p>
           </div>
         </div>
       </div>
