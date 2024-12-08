@@ -80,6 +80,7 @@
 
 .social-button:hover {
   background-color: #f1f3f5; /* 호버 시 배경 색 */
+  transition: ease 0.2s;
 }
 
 .login-footer {
@@ -93,6 +94,7 @@
   font-weight: normal; /* 기본 텍스트 두께 */
   color: #9098B1; /* 텍스트 색상 */
   text-decoration: none; /* 밑줄 제거 */
+  margin-top: 4px;
 }
 
 .dont-have a {
@@ -105,4 +107,21 @@
   color: #001f54;
   font-weight: bold;
 }
-  
+.login-or-line {
+  flex: 1; /* 선의 너비를 유동적으로 설정 */
+  height: 1px; /* 선의 두께 */
+  background-color: #ced4da; /* 선 색상 */
+}
+.login-or-container {
+  display: flex;
+  align-items: center;
+  width: 100%; /* 부모 요소 너비에 맞춤 */
+  max-width: 400px; /* 최대 너비 제한 */
+  margin: 20px 0; /* 상하 여백 */
+}
+.login-or-text {
+  margin: 0 10px; /* 텍스트와 선 사이 여백 */
+  color: #9098B1; /* 텍스트 색상 */
+  font-size: 14px; /* 텍스트 크기 */
+  font-weight: normal; /* 텍스트 두께 */
+}

@@ -18,7 +18,12 @@ const Login = () => {
         </button>
       </form>
 
-      <p className="login-or">OR</p>
+      {/* OR 구분선 */}
+      <div className="login-or-container">
+        <div className="login-or-line"></div>
+        <div className="login-or-text">OR</div>
+        <div className="login-or-line"></div>
+      </div>
 
       <div className="login-social">
         <button className="social-button">Login with Google</button>
@@ -30,9 +35,9 @@ const Login = () => {
           Forgot Password?
         </a>
         <br />
-        <a href="#" className="dont-have">
+        <span className="dont-have">
           Don't have an account? <a href="#" className="login-link">Register</a>
-        </a>
+        </span>
       </div>
     </div>
   );

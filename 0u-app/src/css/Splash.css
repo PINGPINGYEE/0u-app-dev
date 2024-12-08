@@ -1,0 +1,23 @@
+.splash-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* 화면 전체 높이 */
+    background-color: #001f54; /* 배경색 */
+  }
+  
+  .splash-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px; /* 로고 박스 너비 */
+    height: 125px; /* 로고 박스 높이 */
+    background-color: #fff; /* 로고 박스 배경 */
+    border-radius: 20px; /* 둥근 모서리 */
+  }
+  
+  .splash-image {
+    width: 70%; /* 이미지 크기 */
+    height: auto; /* 비율 유지 */
+  }
+  
