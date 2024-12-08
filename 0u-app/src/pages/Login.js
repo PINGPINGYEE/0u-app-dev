@@ -4,7 +4,7 @@ import "../css/Login.css"; // CSS 파일 가져오기
 const Login = () => {
   return (
     <div className="login-container">
-      <div className="logo">
+      <div className="logo-login">
         <h1>0U</h1>
       </div>
       <h2 className="login-title">Welcome to 0U</h2>
