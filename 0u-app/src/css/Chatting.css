@@ -1,0 +1,90 @@
+.chatting-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 440px;
+  margin-left: -25px;
+}
+
+.chat-avatar {
+  width: 50px;
+  height: 50px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-right: 10px;
+  position: relative;
+}
+
+.chat-name {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.user-id {
+  margin: 3px 0;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.chatting-tabs {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  background-color: white;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tab {
+  background: none;
+  border: none;
+  margin: 0 10px;
+  padding: 5px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #888;
+}
+
+.tab.active {
+  color: #000;
+  font-weight: bold;
+  border-bottom: 2px solid #000;
+}
+
+.chat-status {
+  display: flex;
+  flex-direction: column; /* 수직 정렬 */
+  align-items: flex-end; /* 오른쪽 정렬 */
+  position: absolute;
+  right: 15px; /* 오른쪽 여백 */
+}
+
+.chat-time {
+  font-size: 0.9rem;
+  color: #888;
+  margin: 0; /* 시간 아래 간격 제거 */
+  margin-bottom: 5px; /* 배지와의 간격 추가 */
+}
+
+.notification-badge {
+  background-color: #001f54;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
