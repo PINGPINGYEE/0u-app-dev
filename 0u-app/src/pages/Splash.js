@@ -18,7 +18,10 @@ function Splash() {
   return (
     <div className="splash-container">
       <div className="splash-logo">
-        <img src="/icon.png" alt="Icon Logo" className="splash-image" />
+      <img
+          src="/Icon.png"
+          alt="0U Logo"
+        />
       </div>
     </div>
   );

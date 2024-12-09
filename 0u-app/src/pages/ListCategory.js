@@ -16,8 +16,8 @@ const categories = [
 const Category = () => {
   return (
     <div className="category-container">
-      <header className="category-header">
-        <h1>Category</h1>
+      <header className="registration-header">
+        <h1 className="header-title">Category</h1>
       </header>
       <ul className="category-list">
         {categories.map((category, index) => (

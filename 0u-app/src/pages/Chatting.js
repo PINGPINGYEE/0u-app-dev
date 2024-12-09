@@ -24,7 +24,7 @@ const Chatting = () => {
     <div className="chatting-container">
       <header className="chatting-header">
         <button className="back-button" onClick={() => navigate("/main")}>←</button>
-        <h2 className="chatting-title">채팅</h2>
+        <h1 className="header-title">Chatting</h1>
       </header>
       <div className="chatting-tabs">
         <button className="tab active">All</button>
