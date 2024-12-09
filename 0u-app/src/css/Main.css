@@ -39,6 +39,39 @@
   transform: scale(1.1); /* 크기를 1.2배로 확대 */
 }
 
+
+/* 검색 입력 필드 */
+.search-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+}
+
+/* 검색 버튼 */
+.search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4e628e;
+  color: #fff;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+
+/* 닫기 버튼 */
+.close-button {
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  margin-left: 5%;
+  cursor: pointer;
+}
+
+
+
 .banner {
   background: linear-gradient(to top, #4e628e 0%, #223263 100%);
   color: #fff;

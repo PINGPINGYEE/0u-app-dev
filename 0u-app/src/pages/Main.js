@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // 페이지 이동을 위한 useNavigate
 import "../css/Main.css"; // src/css 폴더에 있는 스타일 파일
 
 function Main() {const navigate = useNavigate(); // useNavigate 훅 사용
+  const [showSearch, setShowSearch] = useState(false); // 검색창 상태
 
   const handleNotificationClick = () => {
     navigate("/notification"); // Notification 페이지로 이동
   };
+
+  const handleSearchClick = () => {
+    setShowSearch(true); // 검색창 표시
+  };
+
+  const handleCloseSearch = () => {
+    setShowSearch(false); // 검색창 닫기
+  };
+
+  const handleSearchButtonClick = () => {
+    console.log("Search button clicked!"); // 검색 버튼 클릭 확인
+  };
+
+  const handleProductClick = () => {
+    navigate("/product-detail"); // 상품 상세 페이지로 이동
+  };
+
   return (
     <div className="main-container">
       <header className="header">
@@ -15,6 +33,7 @@ function Main() {const navigate = useNavigate(); // useNavigate 훅 사용
           src="/Search.png"
           alt="Search Icon"
           className="icon"
+          onClick={handleSearchClick}
         />
         {/* 로고 이미지 */}
         <img
@@ -38,12 +57,33 @@ function Main() {const navigate = useNavigate(); // useNavigate 훅 사용
           />
         </div>
       </header>
+
+      {/* 검색 창 */}
+      {showSearch && (
+        <div className="search-modal">
+          <div className="search-bar">
+            <input
+              type="text"
+              placeholder="Search for items or users..."
+              className="search-input"
+            />
+            <button className="search-button" onClick={handleSearchButtonClick}>
+              Search
+            </button>
+            <button className="close-button" onClick={handleCloseSearch}>
+              ✖
+            </button>
+          </div>
+        </div>
+      )}
+
+
       <div className="banner">
         <h2>빌릴수록 더욱 아끼는 환경, 환경을 보호하는 소비</h2>
       </div>
       <div className="cards">
         {/* 상품 1 */}
-        <div className="card">
+        <div className="card" onClick={handleProductClick}>
           <img
             src="https://via.placeholder.com/150"
             alt="Nike Air Max"

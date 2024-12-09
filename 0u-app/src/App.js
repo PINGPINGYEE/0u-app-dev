@@ -12,6 +12,7 @@ import Chatting from "./pages/Chatting";
 import ListCategory from "./pages/ListCategory";
 import ChattingRoom from "./pages/ChattingRoom";
 import ProductRegistration from "./pages/ProductRegistration";
+import ProductDetail from "./pages/ProductDetail";
 import BottomNavigation from "./components/BottomNavigation"; // 하단 네비게이션 컴포넌트
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path="/list-category" element={<WithBottomNav Component={ListCategory} />} />
           <Route path="/chatting-room" element={<WithBottomNav Component={ChattingRoom} />} />
           <Route path="/product-registration" element={<WithBottomNav Component={ProductRegistration} />} />
+          <Route path="/product-detail" element={<WithBottomNav Component={ProductDetail} />} />
         </Routes>
       </div>
     </Router>
