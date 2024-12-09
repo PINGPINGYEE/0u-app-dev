@@ -6,7 +6,7 @@ function ProductDetail() {
   const navigate = useNavigate();
 
   const handleBackClick = () => {
-    navigate("/main"); // 메인 페이지로 이동
+    navigate("/main");
   };
 
   const handleRentClick = () => {
@@ -15,13 +15,13 @@ function ProductDetail() {
   };
 
   const handleChatClick = () => {
-    console.log("채팅하기 버튼 클릭됨");
-    alert("대여자와의 채팅을 시작합니다!");
+    const renterId = "생활의다리미"; // 대여자의 ID
+    navigate("/chatting-room", { state: { renterId } });
   };
 
   const [reviews, setReviews] = useState([
     { id: 1, author: "사용가리", content: "훌륭한 상품입니다!" },
-    { id: 2, author: "이거추천쪼가리", content: "너무깨끗하고 좋아요." },
+    { id: 2, author: "이거추천쪼가리", content: "너무 깨끗하고 좋아요." },
   ]);
 
   return (
@@ -59,7 +59,6 @@ function ProductDetail() {
           채팅하기
         </button>
       </div>
-      {/* 후기 섹션 */}
       <div className="reviews-section">
         <h2>후기</h2>
         {reviews.map((review) => (

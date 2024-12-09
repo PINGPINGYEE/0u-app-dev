@@ -22,7 +22,6 @@ const Category = () => {
       <ul className="category-list">
         {categories.map((category, index) => (
           <li key={index} className="category-item">
-            <span className="category-icon">{category.icon}</span>
             <span className="category-name">{category.name}</span>
           </li>
         ))}

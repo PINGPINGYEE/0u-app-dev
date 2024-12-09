@@ -8,6 +8,10 @@ function Main() {const navigate = useNavigate(); // useNavigate 훅 사용
   const handleNotificationClick = () => {
     navigate("/notification"); // Notification 페이지로 이동
   };
+  
+  const handleMessageClick = () => {
+    navigate("/chatting"); // Notification 페이지로 이동
+  };
 
   const handleSearchClick = () => {
     setShowSearch(true); // 검색창 표시
@@ -54,6 +58,7 @@ function Main() {const navigate = useNavigate(); // useNavigate 훅 사용
             src="/Message.png"
             alt="Message Icon"
             className="icon"
+            onClick={handleMessageClick}
           />
         </div>
       </header>

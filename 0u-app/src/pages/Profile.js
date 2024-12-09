@@ -23,6 +23,10 @@ function Profile() {
     navigate("/order"); // "Order" 페이지로 이동
   };
 
+  const handleRegistrationHistoryClick = () => {
+    navigate("/registration-history"); // "Order" 페이지로 이동
+  };
+
   return (
     <div className="profile-container">
       <header className="profile-header">
@@ -69,7 +73,7 @@ function Profile() {
   onClick={handlePurchaseHistoryClick} // 클릭 이벤트 전달
 />
 
-        <ProfileOption label="REGISTRATION HISTORY" value="7 &nbsp;&nbsp;&nbsp;>" />
+        <ProfileOption label="REGISTRATION HISTORY" value="7 &nbsp;&nbsp;&nbsp;>" onClick={handleRegistrationHistoryClick} />
         <ProfileOption label="GENDER" value="Male &nbsp;&nbsp;&nbsp;>" />
         <ProfileOption label="BIRTHDAY" value="01-07-2002 &nbsp;&nbsp;&nbsp;>" />
         <ProfileOption label="EMAIL" value="example@gmail.com &nbsp;&nbsp;&nbsp;>" />

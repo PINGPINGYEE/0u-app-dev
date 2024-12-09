@@ -1,7 +1,13 @@
 import React, { useState } from "react";
-import "../css/ChattingRoom.css"; // ChattingRoom 페이지 스타일 파일
+import { useLocation, useNavigate } from "react-router-dom";
+import "../css/ChattingRoom.css";
 
 function ChattingRoom() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { nickname } = location.state || { nickname: "알 수 없음" };
+  const displayName = nickname && nickname.trim() ? nickname : "판매자";
+
   const [messages, setMessages] = useState([
     { id: 1, sender: "you", text: "안녕하세요!" },
     { id: 2, sender: "me", text: "안녕하세요! 무엇을 도와드릴까요?" },
@@ -14,16 +20,16 @@ function ChattingRoom() {
   };
 
   const handleSendMessage = () => {
-    if (newMessage.trim() === "") return; // 빈 메시지 방지
+    if (newMessage.trim() === "") return;
     setMessages([...messages, { id: messages.length + 1, sender: "me", text: newMessage }]);
-    setNewMessage(""); // 입력창 초기화
+    setNewMessage("");
   };
 
   return (
     <div className="chatting-container">
       <header className="chatting-header">
-        <button className="back-button">←</button>
-        <h1 className="header-title">Chatting</h1>
+        <button className="back-button" onClick={() => navigate(-1)}>←</button>
+        <h1 className="header-title">{displayName}와의 채팅</h1>
       </header>
       <div className="chatting-messages">
         {messages.map((message) => (

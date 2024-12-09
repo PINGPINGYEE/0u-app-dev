@@ -12,21 +12,18 @@ const Order = () => {
   // 더미 데이터
   const orders = [
     {
-      title: "콜핑 원터치 텐트",
+      title: "APPLE PENCIL 2th Gen",
       date: "24.11.07",
       duration: "(14일간)",
-      owner: "쇼핑몰",
-      price: "45,000",
+      price: "20,000",
       code: "SDKF23SDKFAA",
     },
     {
-      title: "APPLE WATCH 6th Gen",
-      date: "24.08.23",
+      title: "ROLEX DAY DATE",
+      date: "24.11.11",
       duration: "(7일간)",
-      owner: "appdeuingee",
-      price: "25,000",
+      price: "21,000",
       code: "GEKF6I4JFVEW",
-      status: "반납완료",
     },
   ];
 
@@ -35,7 +32,7 @@ const Order = () => {
       {/* 헤더 */}
       <header className="order-header">
       <button className="back-button" onClick={handleBackClick}>←</button> {/* 뒤로가기 버튼 */}
-        <h1 className="order-title">대여내역</h1>
+        <h1 className="order-title">등록내역</h1>
       </header>
       <p className="header-divider" /> {/* 추가된 부분 */}
 
@@ -53,7 +50,6 @@ const Order = () => {
             <hr className="order-divider" />
             <div className="order-details">
               <p className="order-detail">
-                <span>물건 주인</span> {order.owner}
               </p>
               <p className="order-detail">
                 <span>가격</span> <span className="price-bold">{order.price}</span>
@@ -62,7 +58,7 @@ const Order = () => {
                 <span>주문 코드</span> {order.code}
               </p>
               <p className="order-review">
-                <span>후기 쓰기 &nbsp;{'>'}</span>
+                <span>수정하기 &nbsp;{'>'}</span>
               </p>
             </div>
           </div>

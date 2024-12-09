@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // 페이지 이동을 위한 useNavigate
 import "../css/Chatting.css";
 
 const messages = [
@@ -12,13 +13,18 @@ const messages = [
   { name: "모니터", time: "3:10 PM", status: "Read", id: "@수박이박수", notification: 0 },
   { name: "키보드", time: "3:05 PM", status: "Unread", id: "@스리슬쩍스리랑카", notification: 0 },
 ];
-
 const Chatting = () => {
+  const navigate = useNavigate();
+
+  const handleChatClick = (chat) => {
+    navigate(`/chatting-room`, { state: { nickname: chat.id } });
+  };
+
   return (
     <div className="chatting-container">
       <header className="chatting-header">
-        <button className="back-button">←</button>
-        <h1 className="chatting-title">CHAT</h1>
+        <button className="back-button" onClick={() => navigate("/main")}>←</button>
+        <h2 className="chatting-title">채팅</h2>
       </header>
       <div className="chatting-tabs">
         <button className="tab active">All</button>
@@ -27,7 +33,7 @@ const Chatting = () => {
       </div>
       <ul className="chatting-list">
         {messages.map((chat, index) => (
-          <li key={index} className="chatting-item">
+          <li key={index} className="chatting-item" onClick={() => handleChatClick(chat)}>
             <div className="chat-avatar"></div>
             <div className="chat-details">
               <h3 className="chat-name">{chat.name}</h3>
@@ -36,7 +42,6 @@ const Chatting = () => {
             <div className="chat-status">
               <span className="chat-time">{chat.time}</span>
               {chat.notification > 0 && <span className="notification-badge">{chat.notification}</span>}
-              
             </div>
           </li>
         ))}

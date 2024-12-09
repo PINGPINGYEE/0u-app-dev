@@ -13,6 +13,7 @@ import ListCategory from "./pages/ListCategory";
 import ChattingRoom from "./pages/ChattingRoom";
 import ProductRegistration from "./pages/ProductRegistration";
 import ProductDetail from "./pages/ProductDetail";
+import RegistrationHistory from "./pages/RegistrationHistory";
 import BottomNavigation from "./components/BottomNavigation"; // 하단 네비게이션 컴포넌트
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Route path="/chatting-room" element={<WithBottomNav Component={ChattingRoom} />} />
           <Route path="/product-registration" element={<WithBottomNav Component={ProductRegistration} />} />
           <Route path="/product-detail" element={<WithBottomNav Component={ProductDetail} />} />
+          <Route path="/registration-history" element={<WithBottomNav Component={RegistrationHistory} />} />
         </Routes>
       </div>
     </Router>

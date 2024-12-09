@@ -35,7 +35,7 @@ function Notification() {const navigate = useNavigate();
     <div className="notification-container">
       <header className="notification-header">
         <button className="back-button" onClick={handleBackClick}>←</button>
-        <h1 className="header-title">Feed</h1>
+        <h2 className="header-title">알림</h2>
       </header>
       <div className="notification-list">
         {notifications.map((notification) => (
